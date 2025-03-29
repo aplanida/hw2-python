@@ -8,4 +8,4 @@ def test_search_success(url, size_browser):
 
 def test_search_zero_result(url, size_browser):
     browser.element('[name="q"]').should(be.blank).type('ghjjsjslmsmfklefasc').press_enter()
-    assert browser.element('html').should(have.text('результаты не найдены'))
+    assert browser.element('[data-testid="web-vertical"]').should(have.text('результаты не найдены'))
